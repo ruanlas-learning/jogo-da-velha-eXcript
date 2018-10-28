@@ -15,16 +15,19 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado1"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado2"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado3"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
     </LinearLayout>
 
@@ -35,16 +38,19 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado4"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado5"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado6"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
     </LinearLayout>
 
@@ -55,17 +61,27 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado7"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado8"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado9"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
     </LinearLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:text="Play"
+        android:onClick="newGame"/>
 
 </LinearLayout>

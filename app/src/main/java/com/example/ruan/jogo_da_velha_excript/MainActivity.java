@@ -51,6 +51,24 @@ public class MainActivity extends AppCompatActivity {
         return (Button)getView().findViewWithTag(QUADRADO + tagNum);
     }
 
+    public void newGame(View view){
+
+        setEnableQuadrado(true);
+        for (int i = 1; i < 9; i++){
+            if (getQuadrado(i) != null){
+                getQuadrado(i).setText("");
+            }
+        }
+    }
+
+    public void setEnableQuadrado(boolean b){
+        for (int i = 1; i < 9; i++){
+            if (getQuadrado(i) != null){
+                getQuadrado(i).setEnabled(b);
+            }
+        }
+    }
+
     public View getView() {
         return view;
     }
