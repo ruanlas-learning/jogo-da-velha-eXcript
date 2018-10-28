@@ -35,14 +35,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickQuadrado(View view){
-        if (lastPlay.equals(XIS)){
-            ((Button)view).setText(BOLA);
-            lastPlay = BOLA;
+        if ( ((Button)view).getText().equals("") ){ // Verifica se o campo já foi "jogado"
+
+            if (lastPlay.equals(XIS)){
+                ((Button)view).setText(BOLA);
+                lastPlay = BOLA;
+            }else {
+                ((Button)view).setText(XIS);
+                lastPlay = XIS;
+            }
+
         }else {
-            ((Button)view).setText(XIS);
-            lastPlay = XIS;
+            Toast.makeText(getView().getContext(), "Opa! Escolha outro quadrado.", Toast.LENGTH_SHORT).show();
         }
-        Toast.makeText(getView().getContext(), view.getTag().toString(), Toast.LENGTH_SHORT).show();
     }
 
     public Button getQuadrado(int tagNum){
@@ -54,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     public void newGame(View view){
 
         setEnableQuadrado(true);
-        for (int i = 1; i < 9; i++){
+        for (int i = 1; i <= 9; i++){
             if (getQuadrado(i) != null){
                 getQuadrado(i).setText("");
             }
@@ -62,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setEnableQuadrado(boolean b){
-        for (int i = 1; i < 9; i++){
+        for (int i = 1; i <= 9; i++){
             if (getQuadrado(i) != null){
                 getQuadrado(i).setEnabled(b);
             }
